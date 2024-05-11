@@ -1,0 +1,85 @@
+form input{
+    margin: 10px;
+}
+
+.submitbtn {
+    border-radius: 5px;
+}
+
+#add {
+    background-color: lime;
+    transition: 0.8s;
+}
+
+#add:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 3px 3px rgb(75, 255, 25);
+}
+
+#modify {
+    background-color: rgb(250, 164, 114);
+    transition: 0.8s;
+}
+
+#modify:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 3px 3px lightcoral;
+}
+
+
+
+/* CSS JS */
+
+.mod {
+    background-color: rgb(250, 164, 114);
+    transition: 0.8s;
+}
+
+.mod:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 3px 3px lightcoral;
+}
+
+.delete {
+    background-color: #f00;
+    color: white;
+    transition: 0.8s;
+}
+
+.delete:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 3px 3px rgb(254, 20, 20);
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border-left-color: lime;
+    animation: spin 1s linear infinite;
+    margin-left: 45%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .message-box {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background: lime;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+  }

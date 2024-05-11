@@ -8,6 +8,7 @@
     <!-- CDN bootstrap icone -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Mio CSS -->
+    <link rel="stylesheet" href="/style.css">
     <title>DemaZon</title>
 </head>
 <body>
@@ -15,42 +16,44 @@
     <div class="container">
 
         <!-- contenitore per il form di creazione oggetto -->
-        <div id="Create-Item" class="row text-center mt-3 justify-content-center  ">
+        <div class="row text-center mt-3 justify-content-center  ">
             <h2>Inserisci Prodotto</h2>
-
-            <!-- Bottone per aprire/chiudere il form -->
-            <button class="btn colapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#createForm" aria-expanded="false" aria-controls="createForm">
-                <i class="bi bi-plus-circle-dotted"></i>
-            </button>
-            
-            <div class="collapse" id="createForm">
-                <form id="items-form">
+            <div>
+                <form id="product-form" class=" mt-3 col-12 needs-validation" novalidate="">
                     <!-- nome oggetto -->
                     <label for="name">Nome</label>
-                    <input id="name" type="text" required>
-                    <!-- descrizione oggetto -->
+                    <input id="name" type="text" placeholder="" value="" required="">
+                    <!-- descrizione oggetto -->  
                     <label for="description">Descrizione</label>
-                    <input id="description" type="text" required>
+                    <input id="description" type="text" placeholder="" value="" required="">
                     <!-- marca oggetto -->
                     <label for="brand">Brand</label>
-                    <input id="brand" type="text" required>
+                    <input id="brand" type="text" placeholder="" value="" required="">
                     <!-- Immagine oggetto -->
-                    <label for="item-img">Immagine (URL)</label>
-                    <input id="item-img" type="url" required>
+                    <label for="image-img">Immagine (URL)</label> 
+                    <input id="image-img" type="url" placeholder="" value="" required="">
                     <!-- prezzo oggetto -->
                     <label for="price">Prezzo</label>
-                    <input id="price" type="text" required>
-                    <button class="submitbtn" type="submit" onclick="createProducts()">Aggiungi +</button>
-                    
+                    <input id="price" type="text" placeholder="" value="" required="">
+                    <input type="hidden" class="form-control" id="id" placeholder="" value="" required="">
+                    <!-- bottoni -->
+                    <button id="add" class="submitbtn" type="submit" onclick="createProducts(event)">Aggiungi</button>
+                    <button id="modify" class="submitbtn d-none" onclick="modifyProduct()">Modifica</button>
                 </form>
             </div>               
         </div>
         <div id="spinner" class="spinner" style="display: none"></div>
         <div id="message-box" class="message-box"></div>
+        <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+              <div id="products-list" class="row row-cols-12 g-3">
+              </div>
+            </div>
+        </div>  
     </div>
     <!-- CDN JS Boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Mio JS -->
-    <script src="/backOffice.js"></script>
+    <script src="/Back/backOffice.js"></script>
 </body>
 </html>
