@@ -30,13 +30,11 @@ const showProducts = async () => {
         // Popola il contenitore con le card dei prodotti
         productsContainer.innerHTML = products.map((product) => `
             <div class="col-12 box">
-                <img src="${product.imageUrl}" width="200px" height="220px">
-                <div class="mt-1">
+                <img src="${product.imageUrl}">
+                <div class="mt-1 text-center">
                     <h4>${product.name}</h4>
-                    <div class="mt-1">
-                        <h6 class="mb-0 pe-1">${product.brand}</h6>
-                        <small><b>${product.price},00 €</b></small>
-                    </div>
+                    <h5 class="pe-1">${product.brand}</h5>
+                    <small><b>${product.price} €</b></small>
                 </div>
                 <div class="mt-2"> 
                     <button class="submitbtn detail mb-1"><a class="text-decoration-none text-white" href="/detail/detail.html?id=${product._id}">Dettaglio</a></button>

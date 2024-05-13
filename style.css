@@ -1,3 +1,17 @@
+/* CSS GENERICO PER CLASSI IN COMUNE */
+
+nav {
+    border-bottom: 1px solid lightskyblue;
+    box-shadow: 2px 2px lightskyblue;
+    background-color: lightblue;
+}
+
+footer {
+    border-top: 1px solid lightskyblue;
+    box-shadow: 2px 2px lightskyblue;
+    background-color: lightblue;
+}
+
 /* PAGINA DI BACKOFFICE */
 
 form input{
@@ -28,7 +42,9 @@ form input{
     box-shadow: 0 0 3px 3px lightcoral;
 }
 
-
+.img-back {
+    width: 10%;
+}
 
 /* CSS DOPO IL JS DEL BACKOFFICE */
 
@@ -60,7 +76,7 @@ form input{
     border-radius: 50%;
     border-left-color: lime;
     animation: spin 1s linear infinite;
-    margin-left: 45%;
+    margin-left: 50%;
     margin-top: 5px;
     margin-bottom: 10px;
 }
@@ -99,6 +115,7 @@ form input{
 .box {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     border: 1px solid gray;
     box-shadow: 2px 2px;
@@ -110,6 +127,8 @@ form input{
 
 .box img {
     margin-top: 20px;
+    width: auto;
+    height: 40%;
 }
 
 /* CSS DOPO IL JS PAGINA DI VETRINA */
@@ -122,4 +141,30 @@ form input{
 .detail:hover {
     transform: scale(1.1);
     box-shadow: 0 0 5px 3px lightblue;
+}
+
+/* CSS PAFINA DETAILS */
+
+.box-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    box-shadow: 2px 2px;
+    width: 600px;
+    height: 700px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.box-detail img{
+    width: 40%;
+}
+
+.box-detail h4,
+.box-detail p,
+.box-detail h6,
+.box-detail small {
+    width: 100%;
 }

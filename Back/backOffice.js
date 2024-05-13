@@ -34,7 +34,7 @@ const createProducts = async (event) => {
     const constImageUrl = document.getElementById("image-img").value;
     const constPrice = document.getElementById("price").value;
       
-    
+
     // Creazione di un nuovo oggetto prodotto
     const newProduct = {
         name: constName,
@@ -88,19 +88,18 @@ const showProducts = async () => {
         // Popola il contenitore con le card dei prodotti
         productsContainer.innerHTML = products.map((product) => `
             <div class="col-12 d-flex justify-content-between align-items-center ">
-                <img src="${product.imageUrl}" width="80px" height="100px">
-                <div class="d-flex flex-column justify-content-center">
+                <img class="img-back" src="${product.imageUrl}">
+                <div class="d-flex flex-column justify-content-center text-center">
                     <h4>${product.name}</h4>
-                    <div class="d-flex flex-row align-items-center">
-                        <h6 class="mb-0 pe-1">${product.brand}</h6>
-                        <small><b>${product.price},00 €</b></small>
-                    </div>
+                    <h5 class="pe-1">${product.brand}</h5>
+                    <small><b>${product.price} €</b></small>
                 </div>
                 <div class="d-flex flex-column justify-content-center"> 
                     <button class="submitbtn mod mb-1" onclick="getValueForm('${product._id}')"><a class="text-decoration-none text-white" href="#">Modifica</a></button>
                     <button class="submitbtn delete mt-1" onclick="deleteProduct('${product._id}')">Cancella</button>
                 </div>
             </div>
+            <div><hr clss="bg-dark"></div>
         `).join("");
     }
     // Nasconde lo spinner una volta caricati i prodotti
@@ -136,7 +135,9 @@ const getValueForm = async (idInInput) => {
 };
 
 // Funzione per modificare un prodotto
-const modifyProduct = async () => {
+const modifyProduct = async (event) => {
+    // Impedisce il comportamento predefinito del form
+    event.preventDefault();
     // Recupero dei valori dal form
     const constName = document.getElementById("name").value;
     const constdDscription = document.getElementById("description").value;
@@ -153,6 +154,7 @@ const modifyProduct = async () => {
         imageUrl: constImageUrl,
         price: constPrice,
     };
+    console.log(modifyProduct);
 
     // Chiamata all'API per modificare il prodotto
     const res = await fetch(url + id, {
