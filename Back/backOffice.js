@@ -170,6 +170,9 @@ const modifyProduct = async (event) => {
     if (res.ok) {
         mostraSpinner();
         mostraMessaggio("Prodotto aggiornato con successo");
+        // Mostra il bottone di aggiunta e nasconde il bottone di modifica
+        modify.classList.add("d-none");
+        add.classList.remove("d-none");
         await showProducts();
     } else {
         // Altrimenti mostra un messaggio di errore
