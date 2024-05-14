@@ -46,7 +46,7 @@ const showProducts = async () => {
                     <small><b>${product.price} €</b></small>
                 </div>
                 <div class="mt-2"> 
-                    <button class="submitbtn detail mb-1"><a class="text-decoration-none text-white" href="/detail/detail.html?id=${product._id}">Dettaglio</a></button>
+                    <button class="submitbtn detail mb-1"><a class="text-decoration-none text-white" href="../detail/detail.html?id=${product._id}">Dettaglio</a></button>
                 </div>
             </div>
         `).join("");
@@ -99,11 +99,13 @@ lente.addEventListener("click", function () {
     // Verifico se è già stato cliccato
     if (!cliccato) {
         // Se non è stato ancora cliccato, aggiungo la classe e imposto lo stato del clic a true
+        ricerca.classList.remove("disattiva-focus");
         ricerca.classList.add("animazione");
         ricerca.classList.remove("dissolvenza");
         cliccato = true;
     } else {
         // Se è già stato cliccato, rimuovo la classe e imposto lo stato del clic a false
+        ricerca.classList.add("disattiva-focus");
         ricerca.classList.remove("animazione");
         ricerca.classList.add("dissolvenza");
         cliccato = false;

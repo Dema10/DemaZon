@@ -24,8 +24,15 @@ h2 {
     align-items: center;
 }
 
+#product-form input {
+    outline: none;
+    box-shadow: none;
+}
+
 #product-form input:focus-visible {
     background-color: lightgreen;
+    border-color: lime;
+    box-shadow: 0 0 15px lightgreen;
 }
 
 #product-form div {
@@ -134,6 +141,10 @@ h2 {
     opacity: 0;
 }
 
+.disattiva-focus {
+    pointer-events: none;
+}
+
 .animazione {
     animation: search 2s linear forwards;
 }
@@ -179,7 +190,7 @@ h2 {
 .user {
     width: 40px;
     height: 40px;
-    background-image: url(/assets/Lore.jpeg);
+    background-image: url(../assets/Lore.jpeg);
     background-position: center;
     background-size: cover;
     cursor: pointer;
@@ -257,4 +268,8 @@ h2 {
 .box-detail h6,
 .box-detail small {
     width: 100%;
+}
+
+.box-detail:hover {
+    box-shadow: 0 0 15px lime;
 }
