@@ -208,7 +208,9 @@ function mostraSpinner() {
 
 // Funzione per nascondere lo spinner
 function nascondiSpinner() {
-    document.getElementById("spinner").style.display = "none";
+    setTimeout(() => {
+        document.getElementById("spinner").style.display = "none";
+    }, 1000);
 };
 
 // Funzione per mostrare un messaggio

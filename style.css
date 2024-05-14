@@ -14,8 +14,30 @@ footer {
 
 /* PAGINA DI BACKOFFICE */
 
-form input{
-    margin: 10px;
+h2 {
+    color: lime;
+}
+
+#prduct-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#product-form input:focus-visible {
+    background-color: lightgreen;
+}
+
+#product-form div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#product-form label {
+    margin-right: 10px;
+    width: 100%;
+    text-align: left;
 }
 
 .submitbtn {
@@ -76,7 +98,7 @@ form input{
     border-radius: 50%;
     border-left-color: lime;
     animation: spin 1s linear infinite;
-    margin-left: 50%;
+    margin-left: 48%;
     margin-top: 5px;
     margin-bottom: 10px;
 }
@@ -103,6 +125,57 @@ form input{
 }
 
 /* CSS PAGINA DI VETRINA */
+.forum {
+    position: relative;
+}
+
+.forum input {
+    border-radius: 30px;
+    opacity: 0;
+}
+
+.animazione {
+    animation: search 2s linear forwards;
+}
+
+.dissolvenza {
+    animation: search2 2s linear forwards;
+}
+
+@keyframes search {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes search2 {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.forum div {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 4px;
+    text-align: center;
+    top: 4px;
+    right: 8px;
+}
+
+.bg-lightblue {
+    background-color: lightblue;
+    border-top: 1px solid lightskyblue;
+    box-shadow: 2px 2px lightskyblue;
+}
+
 .user {
     width: 40px;
     height: 40px;
@@ -122,7 +195,24 @@ form input{
     width: 300px;
     height: 400px;
     border-radius: 5px;
-    margin-right: 10px;
+    margin-right: 20px;
+}
+
+.box:hover {
+    animation: bounce 1.5s;
+    box-shadow: 0 0 15px lightskyblue;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .box img {
@@ -143,7 +233,7 @@ form input{
     box-shadow: 0 0 5px 3px lightblue;
 }
 
-/* CSS PAFINA DETAILS */
+/* CSS PAGINA DETAILS */
 
 .box-detail {
     display: flex;
