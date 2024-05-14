@@ -6,6 +6,10 @@ nav {
     background-color: lightblue;
 }
 
+.hover-c:hover {
+    color: blue;
+}
+
 footer {
     border-top: 1px solid lightskyblue;
     box-shadow: 2px 2px lightskyblue;
@@ -190,7 +194,7 @@ h2 {
 .user {
     width: 40px;
     height: 40px;
-    background-image: url(../assets/Lore.jpeg);
+    background-image: url(assets/Lore.jpeg);
     background-position: center;
     background-size: cover;
     cursor: pointer;
